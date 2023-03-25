@@ -1,7 +1,12 @@
+ano_de_vacinacao = int(input())
+periodicidade = int(input())
+palavra = ""
 
-ano_de_vacinacao = int(input('Ano de vacinação: '))
-periodicidade = int(input('Periodicidade (em anos): '))
-
-for doses in range(3):
-    print(ano_de_vacinacao+periodicidade)
+for dose in range(3):
+    proximo = ano_de_vacinacao + periodicidade
     ano_de_vacinacao += periodicidade
+    if dose == 0:
+        palavra += str(proximo)
+    else:
+        palavra += " " + str(proximo)
+print(palavra)
