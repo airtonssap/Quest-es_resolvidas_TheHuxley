@@ -1,5 +1,5 @@
 while True:
-    idade = int(input('Qual sua idade: '))
+    idade = int(input())
     if idade > 65:
         print('Você é um idoso.')
     elif idade > 35:
@@ -11,6 +11,6 @@ while True:
     elif idade > 0:
         print('Você é uma criança.')
     elif idade < 0:
-        print('a pessoa ainda não nasceu')
+        print('Você ainda não nasceu.')
     else:
         break
