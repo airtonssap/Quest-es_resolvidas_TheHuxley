@@ -1,23 +1,23 @@
 
-qnt_de_jogos = int(input('Quantos jogos serão realizados? '))
+qnt_de_jogos = int(input())
 
 for jogos in range(qnt_de_jogos):
-    tam_senha = input('Qual o tamanho da senha númerica que será utilizada? ')
-    senha = input('Digite a sua senha: ')
+    tam_senha = input()
+    senha = input()
     while True:
-        valor = input('Adivinhe a senha: ')
+        tentativa = input()
+        if tentativa == '0'*len(senha):
+            break
         excelente = 0
         bom = 0
         for iteracao in range(len(senha)):
-            if valor[iteracao] in senha:
-                if valor[iteracao] == senha[iteracao]:
+            if tentativa[iteracao] in senha:
+                if tentativa[iteracao] == senha[iteracao]:
                     excelente += 1
                 else:
                     bom += 1
-        tupla = (excelente, bom)
-        print(tupla)
+        resposta = f"({excelente},{bom})"
+        print(resposta)
         
-        if valor == senha:
-            break
-        if valor == '0'*len(senha):
+        if tentativa == senha:
             break
