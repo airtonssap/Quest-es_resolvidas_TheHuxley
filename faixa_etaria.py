@@ -10,5 +10,7 @@ while True:
         print('Você é um adolescente.')
     elif idade > 0:
         print('Você é uma criança.')
-    else:
+    elif idade < 0:
         print('a pessoa ainda não nasceu')
+    else:
+        break
